@@ -54,11 +54,11 @@ div input, div select {
 }
 
 button {
-    display: block;
-    margin: 0 auto;
+    display: grid;
+    margin: 10px auto;
     padding: 40px 130px;
     border-radius: 20px;
-    background-color: #63e063;
+    background-color: #4def4d;
     font-size: 20px;
 }
 

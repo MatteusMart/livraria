@@ -13,18 +13,19 @@
         <form action="">
             <div id="menu">
                 <div>
-                    <label for="título">Título</label>
-                    <input class="input1" type="text" name="título"
+                    <label for="titulo">Título</label>
+                    <input class="input1" type="text" name="titulo" id="titulo"
                     placeholder="Digite o título do livro">
                 </div>
                 <div>
                     <label for="autor">Autor</label>
-                    <input class="" type="text" name="autor"
+                    <input class="" type="text" name="autor" id="autor"
                     placeholder="Digite o autor do livro">
                 </div>
                 <div>
                     <label for="categoria">Categoria</label>
-                    <select name="selecao" id="selecao">
+                    <select name="selecao" id="categoria">
+                        <option value="" disabled selected>Selecione a categoria</option>
                         <option value="drama">Drama</option>
                         <option value="ficcao">ficção</option>
                         <option value="romance">Romance</option>
@@ -33,12 +34,12 @@
                 </div>
                 <div>
                     <label for="valor">Valor</label>
-                    <input type="text" name="valor"
+                    <input type="number" name="valor" id="valor"
                     placeholder="R$100,00">
                 </div>
             </div>
 
-                <button type="submit">cadastrar</button>
+                <button type="button" onclick="cadastrar()">cadastrar</button>
         </form>
 
     </div>
