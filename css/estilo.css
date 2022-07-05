@@ -66,3 +66,42 @@ button:hover{
     transition-duration:0.3s;
     background-color: #32b232;
 }
+#lista-livros-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    margin-top: 15px;
+}
+
+figure{
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 4px;
+}
+
+.livros-img{
+    width: 100%;
+}
+
+figcaption{
+    padding: 10px;
+    background-color: white;
+}
+
+h4,h5,small{
+    color: black;
+    display: grid;
+    text-align: center;
+}
+
+.btn-comprar{
+    width: 40%;
+    background-color:  #4def4d;
+    color: black;
+    padding: 14px 20px;
+    display: grid;
+    margin: 8px auto;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

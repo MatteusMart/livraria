@@ -52,6 +52,38 @@ const cadastrar = () =>{
     })
     
 }
+const listar = () =>{
+    fetch('backend/listar-livros.php')
+
+    .then(response => response.json())
+    .then(resposta => {
+        //aqui sera manipulado o HTML com o dado retornado pelo PHP em formato json
+        //O JS monta o html de forma dinamica, atraves de um laço
+
+        //limpa a div que ira amarzenar a lista de livros
+        document.getElementById('lista-livros-grid').innerHTML = ``
+
+        for(let cont = 0;cont < resposta.length; cont++){
+            document.getElementById('lista-livros-grid').innerHTML += 
+            `
+                <figure>
+                    <img class="livros-img" src="img/livro-faltando.png" alt="Imagem do livro">
+                    <figcaption>
+                        <h4>${resposta[cont]['titulo']}</h4>
+                        <h5>${resposta[cont]['autor']}</h5>
+                        <small>${resposta[cont]['id_categorias']}</small>
+                        <h5>R$ ${resposta[cont]['valor']}</h5>
+                        <button class="btn-comprar">Comprar</button>
+                    </figcaption>
+                </figure>
+            `
+        
+            
+        }
+    })
+
+}
+
 
 // um igual só = recebe, dois igual == comparação
 // Forma de função padrao
